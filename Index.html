@@ -1,12 +1,70 @@
-!
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Registro de Juegos</title>
-</head>
-<body>
-    
-</body>
+<html lang="en">
+  <head>
+    <!-- Metadatos básicos de la página -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de Texto</title>
+    <!-- Favicon de la página -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <!-- Vinculación de la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Vinculación del script para las alertas (SweetAlert) -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+  <body>
+    <!-- Contenedor principal -->
+    <div class="container">
+      <!-- Sección Encriptación -->
+      <div class="encriptar">
+        <!-- Cuadro de texto para ingresar el texto a encriptar/desencriptar -->
+        <textarea
+          name="texto"
+          class="texto"
+          id="texto"
+          cols="30"
+          rows="10"
+          placeholder="Ingresa el texto en este campo"
+        ></textarea>
+
+        <!-- Indicaciones para el usuario sobre las reglas del texto -->
+        <div class="terminos">
+          <p>Incluye solo letras minúsculas y sin acentos.</p>
+        </div>
+
+        <!-- Botones para encriptar y desencriptar el texto -->
+        <div class="botones">
+          <!-- Botón para encriptar el texto ingresado -->
+          <button class="btn-encriptar" type="button" onclick="encriptar()">
+            Encriptar
+          </button>
+          <!-- Botón para desencriptar el texto ingresado -->
+          <input
+            type="button"
+            class="btn-desencriptar"
+            value="Desencriptar"
+            onclick="desencriptar()"
+          />
+        </div>
+      </div>
+
+      <!-- Sección para mostrar el mensaje encriptado o un mensaje por defecto -->
+      <div class="encriptado">
+        <!-- Imagen decorativa -->
+        <img src="img/muñeco.png" alt="" id="muñeco" />
+        <!-- Contenedor para mostrar el mensaje encriptado/desencriptado -->
+        <div class="mensaje-encriptado" id="mensaje-encriptado">
+          <!-- Título del mensaje que se muestra por defecto -->
+          <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+          <!-- Párrafo explicativo cuando no hay un mensaje encriptado -->
+          <p id="parrafo">
+            Ingresa el texto que deseas encriptar o desencriptar
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Vinculación del archivo JavaScript que contiene la lógica de encriptado y desencriptado -->
+  <script src="index.js"></script>
 </html>
